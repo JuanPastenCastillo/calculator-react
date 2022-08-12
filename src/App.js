@@ -5,7 +5,11 @@ import {
   Output,
   PreviousOperand,
   CurrentOperand,
-  Button
+  Button,
+  CreatorWrapper,
+  WrapIcons,
+  LinkedinIconStyled,
+  GitHubIconStyled
 } from "./styles/stylesComponents"
 import DigitButton from "./components/DigitButton"
 import OperationButton from "./components/OperationButton"
@@ -152,6 +156,7 @@ function App() {
   )
 
   return (
+    <>
     <MainWrapper>
       <CalculatorGrid>
         <Output>
@@ -187,6 +192,22 @@ function App() {
       <DigitButton digit="0" dispatch={dispatch} />
       <Button spanTwo onClick={() => dispatch({ type: ACTIONS.EVALUATE })}>=</Button>
     </MainWrapper>
+    <CreatorWrapper>
+        <h2>By <span>Juan Pastén Castillo</span></h2>
+        <WrapIcons>
+          <a href="https://github.com/JuanPastenCastillo"
+          target="blank"
+          rel="noreferrer">
+            <GitHubIconStyled />
+          </a>
+          <a href="https://www.linkedin.com/in/juanpastencastillo/"
+          target="blank"
+          rel="noreferrer">
+            <LinkedinIconStyled />
+          </a>
+        </WrapIcons>
+      </CreatorWrapper>
+    </>
   )
 }
 

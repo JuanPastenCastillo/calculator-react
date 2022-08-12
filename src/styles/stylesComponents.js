@@ -1,10 +1,12 @@
 import styled from "styled-components"
+import { GitHubIcon, LinkedinIcon } from "../utils/indexIcons"
 
 export const MainWrapper = styled.div`
   justify-content: center;
   display: grid;
   margin-top: 2rem;
-  grid-template-columns: repeat(4, 6rem);
+  /* grid-template-columns: repeat(4, 6rem); */
+  grid-template-columns: repeat(4, minmax(50px, 9rem));
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
 `
 
@@ -46,4 +48,45 @@ export const Button = styled.button`
   &:focus {
     background-color: hsl(38.8, 100%, 40%);
   }
+`
+
+export const CreatorWrapper = styled.div`
+  /* border:1px white solid; */
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-size: calc(0.8rem + 1vw);
+    text-align: center;
+  }
+  
+  span{
+    color: hsl(38.8, 100%, 60%);
+  }
+
+  a {
+    fill: snow;
+  }
+
+  a:hover {
+    fill: hsl(38.8, 100%, 40%);
+  }
+
+  a > svg {
+    width: 100%;
+    height: 90px;
+  }
+`
+
+export const WrapIcons = styled.div`
+  /* border:1px yellowgreen solid; */
+  display: flex;
+  justify-content: center;
+`
+
+export const GitHubIconStyled = styled(GitHubIcon)`
+  /* display:inline; */
+`
+export const LinkedinIconStyled = styled(LinkedinIcon)`
+  /* display:inline; */
 `
